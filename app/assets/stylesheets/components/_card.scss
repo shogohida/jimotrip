@@ -1,3 +1,50 @@
+
+
+// card for guide show page
+.card-guide {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.card-guide > img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-guide h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-guide p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+}
+
+
+.card-guide .card-guide-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+.card-guide-infos .card-guide-user {
+  position: absolute;
+  right: 16px;
+  top: -20px;
+  width: 40px;
+}
+
+
+
+// other cards - TO BE RENAMED
+
 .card-trip {
   overflow: hidden;
   background: white;
