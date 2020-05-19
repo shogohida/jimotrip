@@ -1,4 +1,9 @@
 class GuidesController < ApplicationController
+  
+   def show
+    @guide = Guide.find(params[:id])
+  end
+  
   def new
     # @user = User.find(params[:user_id])
     @guide = Guide.new
@@ -18,9 +23,6 @@ class GuidesController < ApplicationController
   private
 
   def guide_params
-    params.require(:guide).permit(:location, :biography, :price)
+    params.require(:guide).permit(:location, :biography, :price) # :user_id
   end
-
-  # :user_id
-
 end
