@@ -11,8 +11,6 @@ Rails.application.routes.draw do
   # REFACTORED ROUTES - WARNING: I don't know how to code the User Story 7
   root to: 'pages#home'
 
-  # resources :guides, only: [:search, :show, :new, :create ]
-
   resources :guides, only: [:search, :show, :new, :create ] do
     resources :bookings, only: :create
   end
@@ -41,7 +39,7 @@ Rails.application.routes.draw do
   get '/bookings', to: 'bookings#index', as: :bookings
 
   # User Story 7 - QUESTION - what is the correct syntax for guide/bookings controller?
-  get '/guide/bookings', to: 'guide/bookings#index', as: :????
+  get '/guide/bookings', to: 'guide/bookings#index', as: :guide_bookings
 
   # User Story 8  - DON'T USE
   # User Story 9  - DON'T USE
