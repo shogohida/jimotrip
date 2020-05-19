@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+
 # puts 'Cleaning up the guides...'
 # Guide.destroy_all
 puts 'Cleaning up the user...'
@@ -44,3 +45,4 @@ end
 
 puts "Finished creating #{User.count} users as guides!"
 puts "Finished creating #{Guide.count} guides!"
+
