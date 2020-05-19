@@ -22,7 +22,7 @@
   <div class="row justify-content-center mt-5">
     <div class="col-12 col-lg-6">
       <div class="card-guide">
-        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+        <%= cl_image_tag @guide.photo.key, height: 300, width: 400, crop: :fill %>
         <div class="card-guide-infos">
           <div>
             <h2><%= @current_user.name %></h2>
