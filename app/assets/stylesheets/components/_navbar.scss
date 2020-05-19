@@ -17,7 +17,8 @@
 
 .jimotrip-font-color {
 	color: #E5989B;
-  
+  font-size: 16px;
+	font-weight: bold;
 }
 
 .flexbox {
@@ -35,4 +36,8 @@
 .jimo-logo-font {
 	font-size: 32px;
 	font-weight: bold;
+}
+
+.header-link:hover {
+  text-decoration: none;
 }
