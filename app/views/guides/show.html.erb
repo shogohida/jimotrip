@@ -19,7 +19,7 @@
 
 
 <!-- congratulations message -->
-<div>
+<div class="text-center">
   <h1>Congratulations <%= @current_user.name %>!</h1>
   <p>Your new Jimotrip has been created</p>
   <p>You can review your Jimotrip card below</p>
@@ -29,11 +29,11 @@
 
 <div class="container">
   <div class="row justify-content-center mt-5">
-    
+
     <div class="col-12 col-lg-6">
     <%#= cl_image_tag @guide.photo.key, height: 300, width: 400, crop: :fill %>
     <img src="https://res.cloudinary.com/dwd42pppi/image/upload/v1589947500/high-angle-photo-of-robot-2599244_u421n4.jpg" style="width: 540px"/>
-      
+
       <div class="card-guide">
         <div class="d-flex p-3 justify-content-between" style="height: 200px">
           <div>
@@ -43,7 +43,7 @@
             <br>
             <h6 class="">Enjoy a true Japanese experience! Play soccer, then enjoy a Japanese beer at a Japanese izakaya with me and Japanese robots!</h6>
             <br>
-           <h2 class="salmon-text card-guide-pricing"><%= @guide.price %> Yen</h2>  
+           <h2 class="salmon-text card-guide-pricing"><%= @guide.price %> Yen</h2>
           </div>
           <div>
                     <img class="avatar" alt="avatar" src="https://res.cloudinary.com/dwd42pppi/image/upload/v1589894499/uif0jtkw7bylokixyni6y7nhzamm.jpg" />
