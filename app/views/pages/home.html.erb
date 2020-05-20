@@ -31,12 +31,19 @@
 
 <div class="container mt-5 mb-5">
 	<h1 class="text-center home-text">Discover new <strong>Jimotrip</strong> experiences</h1>
-  <%= simple_form_for :search, url: root_path, method: :get do |f| %>
-  <div class="search-form-control form-group">
-    <input class="form-control string required dark-grey-text" type="text" name="search[query]" id="search_query" value="search for a Jimotrip by city, date, activity, or interest"/>
+  <%# simple_form_for :search, url: root_path, method: :get do |f| %>
+  <%= form_tag guides_path, method: :get do %>
+  <!-- <div class="search-form-control form-group"> -->
+    <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Find a Jimo!"
+    %>
+    <%= submit_tag "Search", class: "btn btn-primary" %>
+    <!-- <input class="form-control string required dark-grey-text" type="text" name="search[query]" id="search_query" value="search for a Jimotrip by city, date, activity, or interest"/>
     <button name="button" type="submit" class="btn btn-jimo text-white">
       <i class="fas fa-search"></i> search
-    </button>
+    </button> -->
   </div>
   <% end %>
 
