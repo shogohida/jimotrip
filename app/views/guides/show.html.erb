@@ -9,7 +9,7 @@
     </div>
       <div class="flexbox nav-right">
         <%= link_to 'become a guide', new_guide_path(@user), class: "jimotrip-font-color nav-right header-link" %>
-        <a class="px-3 navbar-brand jimotrip-font-color" href="#">see my experiences</a>
+        <a class="px-3 navbar-brand jimotrip-font-color" href="#">my experiences</a>
         <a class="navbar-brand jimotrip-font-color" href="#">languages</a>
         <img class="avatar" alt="avatar" src="https://kitt.lewagon.com/placeholder/users/cveneziani" />
       </div>
@@ -29,19 +29,29 @@
 
 <div class="container">
   <div class="row justify-content-center mt-5">
+    
     <div class="col-12 col-lg-6">
+    <%#= cl_image_tag @guide.photo.key, height: 300, width: 400, crop: :fill %>
+    <img src="https://res.cloudinary.com/dwd42pppi/image/upload/v1589947500/high-angle-photo-of-robot-2599244_u421n4.jpg" style="width: 540px"/>
+      
       <div class="card-guide">
-        <%= cl_image_tag @guide.photo.key, height: 300, width: 400, crop: :fill %>
-        <div class="card-guide-infos">
+        <div class="d-flex p-3 justify-content-between" style="height: 200px">
           <div>
-            <h2><%= @current_user.name %></h2>
-            <p><%= @guide.location %></p>
+            <h2><%#= @guide.name %></h2>
+            <h4 class="salmon-text"><strong></strong>Soccer & Izakaya... with Japanese Robots</strong></h4>
+            <h5 class="salmon-text"><%= @guide.location %></h5>
+            <br>
+            <h6 class="">Enjoy a true Japanese experience! Play soccer, then enjoy a Japanese beer at a Japanese izakaya with me and Japanese robots!</h6>
+            <br>
+           <h2 class="salmon-text card-guide-pricing"><%= @guide.price %> Yen</h2>  
           </div>
           <div>
-            <h2 class="card-guide-pricing"><%= @guide.price %> Yens</h2>
+                    <img class="avatar" alt="avatar" src="https://res.cloudinary.com/dwd42pppi/image/upload/v1589894499/uif0jtkw7bylokixyni6y7nhzamm.jpg" />
+            <h2 class="salmon-text"><%= @current_user.name %></h2>
           </div>
         </div>
       </div>
     </div>
   </div>
+
 </div>
