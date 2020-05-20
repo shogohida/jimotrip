@@ -17,11 +17,12 @@
 	<div class="container my-3 offwhite-background p-3 border border-dark rounded">
 		<div class="row">
 			<div class="col-sm-4 col-sm-offset-4">
-			  <%= simple_form_for (@guide) do |f| %>
+        <h1><strong>Add your activity!</strong></h1>
+        <%= simple_form_for (@guide) do |f| %>
 			    <%#= f.input :photo, as: :file %>
 			    <%= f.input :location %>
 			    <%= f.input :price %>
-			    <%= f.input :biography %>
+			    <%= f.input :description %>
           <%= f.input :photo, as: :file %>
 			    <%= f.submit class: "btn btn-warning", value: "become a Jimotrip guide" %>
 			  <% end %>
