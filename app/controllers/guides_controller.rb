@@ -26,6 +26,6 @@ class GuidesController < ApplicationController
   private
 
   def guide_params
-    params.require(:guide).permit(:location, :description, :price, :photo) # :user_id
+    params.require(:guide).permit(:location, :title, :description, :price, :photo) # :user_id
   end
 end
