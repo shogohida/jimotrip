@@ -12,7 +12,7 @@
 }
 
 .jimotrip-navbar {
-	background-color: #F3F3F3;
+	background-color: #E2E2E2;
 }
 
 .jimotrip-font-color {
@@ -51,5 +51,28 @@ body {
 
 .lang-text {
 	font-size: 14px;
+}
 
+.dark-grey-text {
+  color: rgb(80, 80, 80);
+}
+
+.hover-color:hover {
+	color: #d98b8e;
+}
+
+.fas {
+	font-size: 20px;
+}
+
+.btn-salmon {
+	background-color: #E5989B;
+}
+
+.btn-salmon:hover {
+	background-color: #d98b8e;
+}
+
+.btn-jimo:hover {
+	background-color: #d98b8e;
 }

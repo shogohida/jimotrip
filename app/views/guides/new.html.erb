@@ -1,42 +1,42 @@
 <nav class="jimotrip-navbar p-1">
-	<div class="flexbox align-items-center">
-	  <div class="flexbox align-items-center">
- 	    <%= link_to 'Jimotrip', root_path, class: "jimotrip-font-color jimo-logo-font ml-3" %>
- 	    <h4 class="p-3 mt-3 jimotrip-font-color">Explore with a local, enjoy like the locals!</h4>
-	  </div>
-		  <div class="flexbox nav-right">
- 	      <%= link_to 'create a Jimotrip', new_guide_path(@user), class: "jimotrip-font-color nav-right header-link" %>
-		  	<a class="px-3 navbar-brand jimotrip-font-color" href="#">my experiences</a>
-		  	<a class="navbar-brand jimotrip-font-color lang-text" href="#">languages</a>
-		  	<img class="avatar" alt="avatar" src="https://res.cloudinary.com/dwd42pppi/image/upload/v1589894499/uif0jtkw7bylokixyni6y7nhzamm.jpg" />
-		  </div>
-	  </div>
-	</div>
+  <div class="flexbox align-items-center">
+    <div class="flexbox align-items-center">
+      <%= link_to 'Jimotrip', root_path, class: "jimotrip-font-color jimo-logo-font ml-3 hover-color" %>
+      <h4 class="p-3 mt-3 jimotrip-font-color">Explore with a local, enjoy like the locals!</h4>
+    </div>
+      <div class="flexbox nav-right">
+        <%= link_to 'Create a Jimotrip', new_guide_path(@user), class: "jimotrip-font-color nav-right header-link hover-color" %>
+        <a class="px-3 navbar-brand jimotrip-font-color hover-color" href="#">My Jimotrips</a>
+        <a class="navbar-brand jimotrip-font-color lang-text hover-color" href="#"><i class="fas fa-flag-usa"></i></a>
+        <img class="avatar" alt="avatar" src="https://res.cloudinary.com/dwd42pppi/image/upload/v1589894499/uif0jtkw7bylokixyni6y7nhzamm.jpg" />
+      </div>
+    </div>
+  </div>
 </nav>
 
 <div class="container">
   <div class="row justify-content-center">
     <div class="card-trip col-lg-6 my-3 mr-3 offwhite-background p-3">
       <div>
-        <h1 class="salmon-text text-center"><strong><%= "Hey #{@current_user.name.capitalize}!"%></strong></h1>
+        <h1 class="dark-grey-text text-center"><strong><%= "Hey #{@current_user.name.capitalize}!"%></strong></h1>
         <br>
-         <h4 class="salmon-text"><strong>We’re excited to learn about the Jimotrip you’d like to create</strong></h4>
+         <h4 class="dark-grey-text"><strong>We’re excited to learn about the Jimotrip you’d like to create</strong></h4>
       </div>
       <div>
         <br>
-        <h5 class="salmon-text">Here is a quick note on <strong>how to create your new Jimotrip:</strong></h5>
+        <h5 class="dark-grey-text">Here is a quick note on <strong>how to create your new Jimotrip:</strong></h5>
         <br>
         <ul>
-          <li class="salmon-text"><strong>Activity location</strong>: specify the location where your Jimotrip will take place.</li>
-          <li class="salmon-text"><strong>Activity title</strong>: give a title to your Jimotrip. Be explicit for your Jimotrip tourists to understand easily the activity you are offering</li>
-          <li class="salmon-text"><strong>Price</strong>: please specify the price of your activity.</li>
-          <li class="salmon-text"><strong>Activity description</strong> : xplain in more details your Jimotrip.</li>
-          <li class="salmon-text"><strong>Image uploead</strong>: please select one or several photos for your Jimotrip. This will be displayed in your Jimotrip card</li>
+          <li class="dark-grey-text"><strong>Activity location</strong>: specify the location where your Jimotrip will take place.</li>
+          <li class="dark-grey-text"><strong>Activity title</strong>: give a title to your Jimotrip. Be explicit for your Jimotrip tourists to understand easily the activity you are offering</li>
+          <li class="dark-grey-text"><strong>Price</strong>: please specify the price of your activity.</li>
+          <li class="dark-grey-text"><strong>Activity description</strong> : xplain in more details your Jimotrip.</li>
+          <li class="dark-grey-text"><strong>Image uploead</strong>: please select one or several photos for your Jimotrip. This will be displayed in your Jimotrip card</li>
         </ul>
       </div>
     </div>
     <div class="col-lg-5 my-3 offwhite-background p-3 border border-dark rounded">
-      <h1 class="salmon-text"><strong>Add your activity!</strong></h1>
+      <h1 class="dark-grey-text"><strong>Create A New Jimotrip!</strong></h1>
       <%= simple_form_for (@guide) do |f| %>
         <%#= f.input :photo, as: :file %>
         <%= f.input :title %>
@@ -44,7 +44,7 @@
         <%= f.input :price %>
         <%= f.input :description %>
         <%= f.input :photo, as: :file %>
-        <%= f.submit class: "btn btn-warning", value: "become a Jimotrip guide" %>
+        <%= f.submit class: "btn btn-salmon hover-color text-white", value: "become a Jimotrip guide" %>
       <% end %>
   </div>
 </div>

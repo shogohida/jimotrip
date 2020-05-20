@@ -3,13 +3,13 @@
 <nav class="jimotrip-navbar p-1">
 	<div class="flexbox align-items-center">
 	  <div class="flexbox align-items-center">
- 	    <%= link_to 'Jimotrip', root_path, class: "jimotrip-font-color jimo-logo-font ml-3" %>
+ 	    <%= link_to 'Jimotrip', root_path, class: "jimotrip-font-color jimo-logo-font ml-3 hover-color" %>
  	    <h4 class="p-3 mt-3 jimotrip-font-color">Explore with a local, enjoy like the locals!</h4>
 	  </div>
 		  <div class="flexbox nav-right">
- 	      <%= link_to 'create a Jimotrip', new_guide_path(@user), class: "jimotrip-font-color nav-right header-link" %>
-		  	<a class="px-3 navbar-brand jimotrip-font-color" href="#">my experiences</a>
-		  	<a class="navbar-brand jimotrip-font-color lang-text" href="#">languages</a>
+ 	      <%= link_to 'Create a Jimotrip', new_guide_path(@user), class: "jimotrip-font-color nav-right header-link hover-color" %>
+		  	<a class="px-3 navbar-brand jimotrip-font-color hover-color" href="#">My Jimotrips</a>
+		  	<a class="navbar-brand jimotrip-font-color lang-text hover-color" href="#"><i class="fas fa-flag-usa"></i></a>
 		  	<img class="avatar" alt="avatar" src="https://res.cloudinary.com/dwd42pppi/image/upload/v1589894499/uif0jtkw7bylokixyni6y7nhzamm.jpg" />
 		  </div>
 	  </div>
@@ -33,9 +33,9 @@
 	<h1 class="text-center home-text">Discover new <strong>Jimotrip</strong> experiences</h1>
   <%= simple_form_for :search, url: root_path, method: :get do |f| %>
   <div class="search-form-control form-group">
-    <input class="form-control string required" type="text" name="search[query]" id="search_query" value="search for a Jimotrip experience by city, date, activity, or interest"/>
-    <button name="button" type="submit" class="btn btn-jimo">
-      <i class="fas fa-search"></i> search for Jimotrip experiences
+    <input class="form-control string required dark-grey-text" type="text" name="search[query]" id="search_query" value="search for a Jimotrip by city, date, activity, or interest"/>
+    <button name="button" type="submit" class="btn btn-jimo text-white">
+      <i class="fas fa-search"></i> search
     </button>
   </div>
   <% end %>
@@ -43,33 +43,31 @@
 
 <!-- guide cards -->
 
-	<div class="flexbox homepage-card mt-5">
-		<div class="card-trip m-3">
+	<div class="flexbox homepage-card justify-content-around mt-5">
+		<div class="card-trip mr-3">
 		  <img src="https://res.cloudinary.com/dwd42pppi/image/upload/v1589945174/meet_locals_krzfen.jpg" >
 		  <div class="card-trip-infos">
 		    <div>
 		      <h2 class="salmon-text">Meet locals.</h2>
-		      <p class="salmon-text">Befriend locals on your next trip.</p>
+		      <p class="dark-grey">Befriend locals on your next experience.</p>
 		    </div>
 		  </div>
 		</div>
-
-		<div class="card-trip m-3">
+		<div class="card-trip">
 		  <img src="https://res.cloudinary.com/dwd42pppi/image/upload/v1589945213/authentic_expriences_bgq73f.jpg" >
 		  <div class="card-trip-infos">
 		    <div>
 		      <h2 class="salmon-text">Authentic experiences.</h2>
-		      <p class="salmon-text">Don't just observe the culture. Live it.</p>
+		      <p class="dark-grey-text">Don't just observe the culture. Live it.</p>
 		    </div>
 		  </div>
 		</div>
-
-		<div class="card-trip m-3">
+		<div class="card-trip ml-3">
 		  <img src="https://res.cloudinary.com/dwd42pppi/image/upload/v1589945182/new_adventures_j84rk3.jpg" >
 		  <div class="card-trip-infos">
 		    <div>
 		      <h2 class="salmon-text">New adventures.</h2>
-		      <p class="salmon-text">Where will your next experience take you?</p>
+		      <p class="dark-grey">Where will your next Jimotrip take you?</p>
 		    </div>
 		  </div>
 		</div>
