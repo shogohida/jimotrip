@@ -22,7 +22,8 @@
         <h1><strong>Add your activity!</strong></h1>
         <%= simple_form_for (@guide) do |f| %>
 			    <%#= f.input :photo, as: :file %>
-			    <%= f.input :location %>
+			    <%= f.input :title %>
+          <%= f.input :location %>
 			    <%= f.input :price %>
 			    <%= f.input :description %>
           <%= f.input :photo, as: :file %>
