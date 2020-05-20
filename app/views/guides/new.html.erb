@@ -15,22 +15,38 @@
 	</div>
 </nav>
 
-<div class="container">
-	<div class="container my-3 offwhite-background p-3 border border-dark rounded">
-		<div class="row">
-			<div class="col-sm-4 col-sm-offset-4">
-        <h1><strong>Add your activity!</strong></h1>
-        <%= simple_form_for (@guide) do |f| %>
-			    <%#= f.input :photo, as: :file %>
-			    <%= f.input :location %>
-			    <%= f.input :price %>
-			    <%= f.input :description %>
-          <%= f.input :photo, as: :file %>
-			    <%= f.submit class: "btn btn-warning", value: "become a Jimotrip guide" %>
-			  <% end %>
-	    </div>
-	  </div>
-	</div>
+<div class="container ">
+  <div class="row justify-content-center">
+    <div class="card-trip col-lg-6 my-3 mr-3 offwhite-background p-3">
+      <div>
+        <h1 class="salmon-text text-center"><strong><%= "Hey #{@current_user.name.capitalize}!"%></strong></h1>
+        <br>
+         <h4 class="salmon-text"><strong>We’re excited to learn about the Jimotrip you’d like to create</strong></h4>
+      </div>
+      <div>
+        <br>
+        <h5 class="salmon-text">Here is a quick note on <strong>how to create your new Jimotrip:</strong></h5>
+        <br>
+        <ul>
+          <li class="salmon-text"><strong>Activity location</strong>: specify the location where your Jimotrip will take place.</li>
+          <li class="salmon-text"><strong>Activity title</strong>: give a title to your Jimotrip. Be explicit for your Jimotrip tourists to understand easily the activity you are offering</li>
+          <li class="salmon-text"><strong>Price</strong>: please specify the price of your activity.</li>
+          <li class="salmon-text"><strong>Activity description</strong> : xplain in more details your Jimotrip.</li>
+          <li class="salmon-text"><strong>Image uploead</strong>: please select one or several photos for your Jimotrip. This will be displayed in your Jimotrip card</li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-lg-5 my-3 offwhite-background p-3 border border-dark rounded">
+      <h1 class="salmon-text"><strong>Add your activity!</strong></h1>
+      <%= simple_form_for (@guide) do |f| %>
+        <%#= f.input :photo, as: :file %>
+        <%= f.input :location %>
+        <%= f.input :price %>
+        <%= f.input :description %>
+        <%= f.input :photo, as: :file %>
+        <%= f.submit class: "btn btn-warning", value: "become a Jimotrip guide" %>
+      <% end %>
+  </div>
 </div>
 
 
