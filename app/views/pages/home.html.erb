@@ -5,10 +5,12 @@
 	  <div class="flexbox align-items-center">
 			  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" width="40" height="40" alt="">
 	 	    <%= link_to 'Jimotrip', root_path, class: "jimotrip-font-color jimo-logo-font ml-3" %>
+	 	    <h4 class="p-3 jimotrip-font-color">Explore with a local, enjoy like the locals!</h4>
 	  </div>
 		  <div class="flexbox nav-right">
- 	      <%= link_to 'become a guide', new_guide_path(@user), class: "jimotrip-font-color nav-right header-link" %>
-		  	<a class="p-3 navbar-brand jimotrip-font-color" href="#">see my bookings</a>
+ 	      <%= link_to 'create a Jimotrip', new_guide_path(@user), class: "jimotrip-font-color nav-right header-link" %>
+		  	<a class="px-3 navbar-brand jimotrip-font-color" href="#">see my Jimotrip experiences</a>
+		  	<a class="navbar-brand jimotrip-font-color" href="#">languages</a>
 		  	<img class="avatar" alt="avatar" src="https://kitt.lewagon.com/placeholder/users/cveneziani" />
 		  </div>
 	  </div>
@@ -18,23 +20,23 @@
 
 <!-- banner -->
 
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+<!-- <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
   <div class="container">
     <h1>Explore with a local, enjoy like the locals!</h1>
     <p>Live a unique, culturally immersive and unforgettable life experience</p>
   </div>
-</div>
+</div> -->
 
 
 <!-- search  -->
 
 <div class="container mt-5 mb-5">
-	<h1 class="text-center home-text">Find your Jimotrip Guide now</h1>
+	<h1 class="text-center home-text">discover new <strong>Jimotrip</strong> experience</h1>
   <%= simple_form_for :search, url: root_path, method: :get do |f| %>
   <div class="search-form-control form-group">
-    <input class="form-control string required" type="text" name="search[query]" id="search_query" value="search for a Jimotrip guide by city, date, activity, or interest"/>
+    <input class="form-control string required" type="text" name="search[query]" id="search_query" value="search for a Jimotrip experience by city, date, activity, or interest"/>
     <button name="button" type="submit" class="btn btn-jimo">
-      <i class="fas fa-search"></i> search for guides
+      <i class="fas fa-search"></i> search for Jimotrip experiences
     </button>
   </div>
   <% end %>
@@ -47,8 +49,8 @@
 		  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
 		  <div class="card-trip-infos">
 		    <div>
-		      <h2 class="salmon-text">Fun Caption!</h2>
-		      <p class="salmon-text">Smaller Text Here!</p>
+		      <h2 class="salmon-text">Meet locals.</h2>
+		      <p class="salmon-text">Befriend locals on your next trip.</p>
 		    </div>
 		  </div>
 		</div>
@@ -57,8 +59,8 @@
 		  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
 		  <div class="card-trip-infos">
 		    <div>
-		      <h2 class="salmon-text">Fun Caption!</h2>
-		      <p class="salmon-text">Smaller Text Here!</p>
+		      <h2 class="salmon-text">Authentic experiences.</h2>
+		      <p class="salmon-text">Don't just observe the culture. Live it.</p>
 		    </div>
 		  </div>
 		</div>
@@ -67,40 +69,8 @@
 		  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
 		  <div class="card-trip-infos">
 		    <div>
-		      <h2 class="salmon-text">Fun Caption!</h2>
-		      <p class="salmon-text">Smaller Text Here!</p>
-		    </div>
-		  </div>
-		</div>
-	</div>
-
-<div class="flexbox homepage-card">
-		<div class="card-trip m-3">
-		  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-		  <div class="card-trip-infos">
-		    <div>
-		      <h2 class="salmon-text">Fun Caption!</h2>
-		      <p class="salmon-text">Smaller Text Here!</p>
-		    </div>
-		  </div>
-		</div>
-
-		<div class="card-trip m-3">
-		  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-		  <div class="card-trip-infos">
-		    <div>
-		      <h2 class="salmon-text">Fun Caption!</h2>
-		      <p class="salmon-text">Smaller Text Here!</p>
-		    </div>
-		  </div>
-		</div>
-
-		<div class="card-trip m-3">
-		  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-		  <div class="card-trip-infos">
-		    <div>
-		      <h2 class="salmon-text">Fun Caption!</h2>
-		      <p class="salmon-text">Smaller Text Here!</p>
+		      <h2 class="salmon-text">New adventures.</h2>
+		      <p class="salmon-text">Where will your next experience take you?</p>
 		    </div>
 		  </div>
 		</div>
