@@ -2,6 +2,7 @@ class GuidePolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
       scope.all
+      # scope.where(user: user)
     end
   end
 
@@ -13,17 +14,17 @@ class GuidePolicy < ApplicationPolicy
     true
   end
 
-  def edit
-
+  def update?
+    record.user == user
   end
 
   def destroy
 
   end
 
-  private
+  # private
 
-  def user_is_guide?
+  # def user_is_guide?
 
-  end
+  # end
 end

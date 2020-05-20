@@ -1,6 +1,9 @@
 class GuidesController < ApplicationController
+  def index
+    @guides = policy_scope(Guide).order(id: :asc)
+  end
 
-   def show
+  def show
     @guide = Guide.find(params[:id])
     authorize @guide
   end
@@ -20,6 +23,16 @@ class GuidesController < ApplicationController
       redirect_to guide_path(@guide)
     else
       render :new
+    end
+  end
+
+  def update
+    @guide = Guide/find(params[:id])
+    authorize @guide
+    if @guide.update(guide_params)
+      redirect_to guide_path(@guide)
+    else
+      render :edit
     end
   end
 
