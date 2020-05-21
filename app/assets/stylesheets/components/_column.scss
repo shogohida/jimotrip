@@ -26,6 +26,15 @@
 }
 
 .nav-link-dark:hover {
-		background-color: #F4F4F4;
+		background-color: #e8787c;
 		box-shadow: 2px 2px 2px #F1F1F1;
+    color: white;
+}
+
+.nav-pills .nav-link.active {
+  background-color: #E5989B;
+}
+
+.no-bullets {
+  list-style: none;
 }
