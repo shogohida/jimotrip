@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  namespace :guide do
+    get 'bookings/index'
+  end
   get 'bookings/index'
   devise_for :users
   root to: 'pages#home'
@@ -17,8 +20,8 @@ Rails.application.routes.draw do
     resources :bookings, only: :create
   end
 
-  namespace :bookings do
-   resources :guide
+  namespace :guide do
+   resources :bookings, only: :index, as: :guide_bookings
   end
 
   # resources :users, only: [:] do
