@@ -14,11 +14,11 @@
   </div>
 </nav>
 
-<div class="container">
-  <div class="row justify-content-center">
+<div class="container mt-3 d-flex justify-content-around">
+<!--   <div class="row justify-content-center">
     <div class="card-trip col-lg-6 my-3 mr-3 offwhite-background p-3">
       <div>
-        <h1 class="dark-grey-text text-center"><strong><%= "Hey #{@current_user.name.capitalize}!"%></strong></h1>
+        <h1 class="dark-grey-text text-center"><strong><%#= "Hey #{@current_user.name.capitalize}!"%></strong></h1>
         <br>
          <h4 class="dark-grey-text"><strong>We’re excited to learn about the Jimotrip you’d like to create</strong></h4>
       </div>
@@ -34,21 +34,24 @@
           <li class="dark-grey-text"><strong>Image uploead</strong>: please select one or several photos for your Jimotrip. This will be displayed in your Jimotrip card</li>
         </ul>
       </div>
-    </div>
-    <div class="col-lg-5 my-3 offwhite-background p-3 border border-dark rounded">
+    </div> -->
+
+    <div class="card-trip col-lg-5 my-3 offwhite-background p-3">
       <h1 class="dark-grey-text"><strong>Create A New Jimotrip!</strong></h1>
       <%= simple_form_for (@guide) do |f| %>
         <%#= f.input :photo, as: :file %>
-        <%= f.input :title %>
-        <%= f.input :location %>
+        <%= f.input :title, placeholder: 'Soccer & Izakaya... with Japanese Robots' %>
+        <%= f.input :location, placeholder: 'Tokyo' %>
         <%= f.input :date, html5: true %>
-        <%= f.input :price, label: 'Price per day (Yen)' %>
+        <%= f.input :price, label: 'Price per day (Yen)', placeholder: '15' %>
         <%= f.input :category, as: :select, collection: ['History', 'Nature', 'Culture', 'Art', 'Sports', 'Music', 'Food and Drinks', 'Outdoors', 'Shopping', 'Festivals', 'Relaxation', 'Action and Adventure', 'Touristy', 'Family friendly', 'Great for groups'] %>
-        <%= f.input :description %>
+        <%= f.input :description, placeholder: 'Enjoy a true Japanese experience! Play soccer, then enjoy a Japanese beer at a...' %>
         <%= f.input :photo, as: :file %>
         <%= f.submit class: "btn btn-salmon hover-color text-white", value: "become a Jimotrip guide" %>
       <% end %>
   </div>
+
+  <%= image_tag "https://res.cloudinary.com/dwd42pppi/image/upload/v1590032835/example_card_k76ywi.png", alt: "example of a cards", style: "width: 480px; height: 530px", class: "mt-3 card-trip" %>
 </div>
 
 
