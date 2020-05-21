@@ -39,7 +39,8 @@
           <!-- the book now button should link to the bookings dashboard -->
           <%= simple_form_for [guide, @booking] do |f| %>
           <!-- add flatpickr to date (enable time) -->
-          <%= f.input :date %>
+          <%#= f.input :date, input_html: {class: "datepicker"} %>
+          <%= f.input :date, html5: true, label: false %>
           <%= f.submit "Book now", class: "btn btn-salmon text-white" %>
           <% end %>
         </div>
