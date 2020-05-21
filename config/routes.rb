@@ -12,13 +12,17 @@ Rails.application.routes.draw do
   # REFACTORED ROUTES - WARNING: I don't know how to code the User Story 7
   # root to: 'pages#home'
 
-  resources :guides, only: [:index, :search, :show, :new, :create ] do
+  resources :guides, only: [:index, :show, :new, :create ] do
     resources :bookings, only: :create
   end
 
-  namespace :bookings do
-    resources :guide
-  end
+  # namespace :bookings do
+  #   resources :guide
+  # end
+
+  # resources :users, only: [:] do
+  #   resources :bookings, only: :create
+  # end
 
   resources :bookings, only: :index
 
