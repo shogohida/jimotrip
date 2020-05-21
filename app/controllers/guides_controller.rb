@@ -1,6 +1,14 @@
 class GuidesController < ApplicationController
+  # skip_before_action :authenticate_user!, only: [:index, :show]
+
   def index
-    @guides = policy_scope(Guide).order(id: :asc)
+    # @guides = policy_scope(Guide).order(id: :asc)
+    if params[:query].present?
+      sql_query = "title ILIKE :query OR location ILIKE :query OR description ILIKE :query"
+      @guides = policy_scope(Guide.where(sql_query, query: "%#{params[:query]}%"))
+    else
+      @guides = policy_scope(Guide.all)
+    end
   end
 
   def show
