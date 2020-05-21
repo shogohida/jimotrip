@@ -27,6 +27,8 @@ puts 'Creating the users as tourists..'
 end
 puts "Finished creating #{User.count} users as tourists!"
 
+# lecture for seeds https://kitt.lewagon.com/camps/394/lectures/05-Rails%2F03-Rails-restaurant-reviews#source
+
 # guides = [
 #   {
 #     title: ,
