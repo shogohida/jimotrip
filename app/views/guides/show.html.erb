@@ -48,6 +48,7 @@
             <img class="avatar" alt="avatar" src="https://res.cloudinary.com/dwd42pppi/image/upload/v1589894499/uif0jtkw7bylokixyni6y7nhzamm.jpg" />
             <h2 class="salmon-text"><%= @current_user.name %></h2>
           </div>
+          <%= link_to 'Booking', guide_bookings_path(@guide), method: :post %>
         </div>
       </div>
     </div>
