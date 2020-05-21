@@ -17,9 +17,9 @@ Rails.application.routes.draw do
     resources :bookings, only: :create
   end
 
-  # namespace :bookings do
-  #   resources :guide
-  # end
+  namespace :bookings do
+   resources :guide
+  end
 
   # resources :users, only: [:] do
   #   resources :bookings, only: :create
