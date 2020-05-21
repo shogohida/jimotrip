@@ -35,7 +35,6 @@
         </ul>
       </div>
     </div> -->
-
     <div class="card-homepage col-lg-5 my-3 offwhite-background p-3">
       <h1 class="dark-grey-text"><strong>Create A New Jimotrip!</strong></h1>
       <%= simple_form_for (@guide) do |f| %>
@@ -46,7 +45,7 @@
         <%= f.input :category, as: :select, collection: ['History', 'Nature', 'Culture', 'Art', 'Sports', 'Music', 'Food and Drinks', 'Outdoors', 'Shopping', 'Festivals', 'Relaxation', 'Action and Adventure', 'Touristy', 'Family friendly', 'Great for groups'] %>
         <%= f.input :description, placeholder: 'Enjoy a true Japanese experience! Play soccer, then enjoy a Japanese beer at a...' %>
         <%= f.input :photo, as: :file %>
-        <%= f.submit class: "btn btn-salmon hover-color text-white", value: "become a Jimotrip guide" %>
+        <%= f.submit class: "btn btn-salmon hover-color text-white", value: "create a Jimotrip experience" %>
       <% end %>
   </div>
 

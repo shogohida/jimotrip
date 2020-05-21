@@ -18,27 +18,28 @@
 	<div class="d-flex">
 
   	<div class="dashboard-column col-3 mr-3">
-  		<h5 class="salmon-text text-center p-3"><strong>Filter by:</strong></h5>
-  		<ul>
-  			<li>Booking Status</li>
-  			<li>City</li>
-  			<li>Category</li>
+  		<h4 class="salmon-text text-center p-3"><strong>Filter by:</strong></h4>
+  		<ul class="dark-grey-text no-bullets">
+  			<li><i class="far fa-square"></i>  Booking Status</li>
+  			<li><i class="far fa-square"></i>  City</li>
+  			<li><i class="far fa-square"></i>  Category</li>
   		</ul>
   	</div>
 
   	<div class="dashboard-main col-9 p-0">
 
-			<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+			<ul class="nav nav-pills nav-fill mb-3" id="pills-tab" role="tablist">
 			  <li class="nav-item">
-			    <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Jimotrips to Experience</a>
+			    <a class="nav-link active nav-link-dark" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Jimotrips to Experience</a>
 			  </li>
 			  <li class="nav-item">
-			    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Jimotrips I've Created</a>
+			    <a class="nav-link nav-link-dark" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Jimotrips I've Created</a>
 			  </li>
 			</ul>
 			<div class="tab-content" id="pills-tabContent">
 			  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
 			  	<div class="d-flex flex-wrap justify-content-around">
+					<%# raise %>
 					<% @bookings.each do |booking| %>
 				  <div class="tab-card m-0">
 						<img src="https://res.cloudinary.com/dwd42pppi/image/upload/v1589945213/authentic_expriences_bgq73f.jpg" >
