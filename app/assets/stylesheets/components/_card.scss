@@ -1,31 +1,67 @@
 
 
-// card for guide show page
+// guide cards
+
+.cards-guides-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+  padding: 16px;
+
+}
+
 .card-guide {
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.card-guide:hover {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.6);
 }
 
 .card-guide > img {
-  height: 200px;
+  height: 220px;
   width: 100%;
   object-fit: cover;
 }
 
-.card-guide h2 {
+.card-guide .card-guide-title {
   font-size: 16px;
   font-weight: bold;
   margin: 0;
 }
 
-.card-guide p {
-  font-size: 12px;
-  opacity: .7;
-  margin: 0;
+.card-guide .card-guide-location {
+  // font-size: 12px;
+  // opacity: .7;
+  // margin: 0;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 8px;
 }
 
-// cards for homepage
+
+.card-guide .card-guide-price {
+  // font-size: 12px;
+  opacity: .7;
+  // margin: 0;
+  font-style: italic;
+  font-weight: 200;
+  font-size: 16px;
+  line-height: 8px;
+  color: #7A7A7A;
+}
+
+.card-guide .button-book-now {
+  text-align: center;
+  padding: 8px;
+}
+
 .card-guide .card-guide-infos {
   padding: 16px;
   display: flex;
@@ -37,41 +73,40 @@
 .card-guide-infos .card-guide-user {
   position: absolute;
   right: 16px;
-  top: -20px;
-  width: 40px;
+  top: -30px;
 }
 
 
 
-// other cards - TO BE RENAMED
+// Homepage cards
 
-.card-trip {
+.card-homepage {
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   width: 480px;
 }
 
-.card-trip > img {
+.card-homepage > img {
   height: 200px;
   width: 100%;
   object-fit: cover;
 }
 
-.card-trip h2 {
+.card-homepage h2 {
   font-size: 16px;
   font-weight: bold;
   margin: 0;
 }
 
-.card-trip p {
+.card-homepage p {
   font-size: 12px;
   opacity: .7;
   margin: 0;
 }
 
 
-.card-trip .card-trip-infos {
+.card-homepage .card-homepage-infos {
   padding: 16px;
   display: flex;
   justify-content: space-between;
@@ -79,7 +114,7 @@
   position: relative;
 }
 
-.card-trip-infos .card-trip-user {
+.card-homepage-infos .card-homepage-user {
   position: absolute;
   right: 16px;
   top: -20px;

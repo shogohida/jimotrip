@@ -67,6 +67,7 @@ body {
 
 .btn-salmon {
 	background-color: #E5989B;
+  transition: 0.3s;
 }
 
 .btn-salmon:hover {
@@ -82,11 +83,11 @@ body {
 }
 
 :-moz-placeholder {
-   font-style: italic;  
+   font-style: italic;
 }
 ::-moz-placeholder {
-   font-style: italic;  
+   font-style: italic;
 }
-:-ms-input-placeholder {  
-   font-style: italic; 
+:-ms-input-placeholder {
+   font-style: italic;
 }

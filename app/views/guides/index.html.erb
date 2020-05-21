@@ -1,7 +1,51 @@
-<h1>Test</h1>
+<nav class="jimotrip-navbar p-1">
+  <div class="flexbox align-items-center">
+    <div class="flexbox align-items-center">
+      <%= link_to 'Jimotrip', root_path, class: "jimotrip-font-color jimo-logo-font ml-3 hover-color" %>
+      <h4 class="p-3 mt-3 jimotrip-font-color">Explore with a local, enjoy like the locals!</h4>
+    </div>
+      <div class="flexbox nav-right">
+        <%= link_to 'Create a Jimotrip', new_guide_path(@user), class: "jimotrip-font-color nav-right header-link hover-color" %>
+        <a class="px-3 navbar-brand jimotrip-font-color hover-color" href="#">My Jimotrips</a>
+        <a class="navbar-brand jimotrip-font-color lang-text hover-color" href="#"><i class="fas fa-flag-usa"></i></a>
+        <img class="avatar" alt="avatar" src="https://res.cloudinary.com/dwd42pppi/image/upload/v1589894499/uif0jtkw7bylokixyni6y7nhzamm.jpg" />
+      </div>
+    </div>
+  </div>
+</nav>
 
-<% @guides.each do |guide| %>
-  <%= guide.title %>
-<% end %>
+<div class="m-3">
+  <h1>Experiences in LOCATION</h1>
+  <p> COUNT experiences for DATE</p>
+</div>
+
+<div class="cards-guides-grid">
+
+  <% @guides.each do |guide| %>
+
+      <div class="card-guide">
+        <img src="https://archive.dannychoo.com/uploads/imported-images/2010/02/25412/e17ffadf1ec1b2c3eff4c02d69badcef.jpg"/>
+        <div class="card-guide-infos">
+          <div class>
+            <h2 class="card-guide-title"><%= guide.title %></h2>
+            <p class= "card-guide-location"><%= guide.location %></p>
+            <p class="card-guide-price">¥<%= guide.price %> /day /person</p>
+          </div>
+          <div>
+           <img src="https://avatars0.githubusercontent.com/u/10365357?v=4" class="card-guide-user avatar-card-guide-bordered" />
+          </div>
+        </div>
+        <div class="button-book-now">
+          <!-- the book now button should link to the bookings dashboard -->
+          <%= link_to "Book now", "#", class: "btn btn-salmon text-white" %>
+        </div>
+      </div>
+  <% end %>
+
+</div>
+
+
+
+
 
 <%# link_to , dashboard(status of the one you created and one you want to join)?  %>
