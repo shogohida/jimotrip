@@ -13,6 +13,8 @@ puts 'Cleaning up the user...'
 User.destroy_all
 
 LOCATIONS = ['Tokyo', 'Osaka', 'Hiroshima', 'Kyoto']
+GUIDES_TITLE = ['Walk around in Shinjuku', '' ]
+
 
 puts 'Creating the users as tourists..'
 # CREATE users as tourists
@@ -25,6 +27,18 @@ puts 'Creating the users as tourists..'
 end
 puts "Finished creating #{User.count} users as tourists!"
 
+# guides = [
+#   {
+#     title: ,
+#     location: ,
+#     price: ,
+#     url: (image upload lesson)
+#   }
+# ]
+
+
+
+
 puts 'Creating the users as guides..'
 # CREATE users as guides
 10.times do
@@ -35,6 +49,7 @@ puts 'Creating the users as guides..'
   )
   1.times do
     Guide.create!(
+      title: ;
       price: rand(5000..9000),
       location: LOCATIONS.sample,
       biography: Faker::Lorem.paragraph,
