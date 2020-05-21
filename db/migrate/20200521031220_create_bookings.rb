@@ -4,7 +4,7 @@ class CreateBookings < ActiveRecord::Migration[6.0]
       t.references :user, null: false, foreign_key: true
       t.references :guide, null: false, foreign_key: true
       t.date :date
-      t.string :status
+      t.string :status # default: 'Pending'
 
       t.timestamps
     end
