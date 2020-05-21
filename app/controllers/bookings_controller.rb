@@ -21,6 +21,8 @@ class BookingsController < ApplicationController
   def booking_params
     params.require(:booking).permit(:guide_id)
     # status set to default as 'Pending'?
-    # pass status in permit()?
+    # pass status and user_id in permit()?
   end
 end
+
+# guide/bookings, reference to name spacing way
