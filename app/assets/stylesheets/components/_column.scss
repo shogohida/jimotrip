@@ -1,0 +1,31 @@
+.dashboard-column {
+	background-color: #F1F1F1;
+}
+
+.dashboard-main {
+	background-color: #F1F1F1;
+}
+
+.tab-text-salmon {
+  color: #E5989B;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+
+.nav-link-dark {
+	background-color: #E1E1E1;
+  color: rgba(161, 89, 92, .25);
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.tab-btn:hover {
+	color: #d98b8e;
+}
+
+.nav-link-dark:hover {
+		background-color: #F4F4F4;
+		box-shadow: 2px 2px 2px #F1F1F1;
+}
