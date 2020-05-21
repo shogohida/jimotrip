@@ -76,3 +76,17 @@ body {
 .btn-jimo:hover {
 	background-color: #d98b8e;
 }
+
+::-webkit-input-placeholder {
+   font-style: italic;
+}
+
+:-moz-placeholder {
+   font-style: italic;  
+}
+::-moz-placeholder {
+   font-style: italic;  
+}
+:-ms-input-placeholder {  
+   font-style: italic; 
+}
