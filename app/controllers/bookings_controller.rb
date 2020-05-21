@@ -4,10 +4,10 @@ class BookingsController < ApplicationController
   end
 
   def create
-    @guide = Guide.find(params[:user_id])
+    # @guide = Guide.find(params[:_id])
     @booking = Booking.new(booking_params)
     # raise
-    @booking.guide = @guide
+    @booking.user = current_user
     authorize @booking
     if @booking.save
       redirect_to bookings_path    # (@booking)?
