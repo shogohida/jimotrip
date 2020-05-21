@@ -2,6 +2,7 @@ class GuidesController < ApplicationController
   # skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
+    @booking = Booking.new
     # @guides = policy_scope(Guide).order(id: :asc)
     if params[:query].present?
       # sql_query = "title ILIKE :query OR location ILIKE :query OR description ILIKE :query"
