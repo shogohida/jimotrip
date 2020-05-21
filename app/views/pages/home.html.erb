@@ -30,27 +30,30 @@
 <!-- search  -->
 
 <div class="container mt-5 mb-5">
+
 	<h1 class="text-center home-text">Discover new <strong>Jimotrip</strong> experiences</h1>
   <%# simple_form_for :search, url: root_path, method: :get do |f| %>
   <%= form_tag guides_path, method: :get do %>
   <!-- <div class="search-form-control form-group"> -->
-    <%= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-    placeholder: "Find a Jimo!"
-    %>
-    <%= submit_tag "Search", class: "btn btn-primary" %>
+  	<div class="d-flex">
+	    <%= text_field_tag :query,
+	    params[:query],
+	    class: "form-control",
+	    placeholder: "Find your next Jimotrip!"
+	    %>
+	    <%= submit_tag "Search", class: "btn btn-salmon text-white px-5" %>
+    </div>
     <!-- <input class="form-control string required dark-grey-text" type="text" name="search[query]" id="search_query" value="search for a Jimotrip by city, date, activity, or interest"/>
     <button name="button" type="submit" class="btn btn-jimo text-white">
       <i class="fas fa-search"></i> search
     </button> -->
-  </div>
   <% end %>
 
 
 <!-- guide cards -->
 
 	<div class="flexbox homepage-card justify-content-around mt-5">
+
 		<div class="card-trip mr-3">
 		  <img src="https://res.cloudinary.com/dwd42pppi/image/upload/v1589945174/meet_locals_krzfen.jpg" >
 		  <div class="card-trip-infos">
@@ -60,6 +63,7 @@
 		    </div>
 		  </div>
 		</div>
+		
 		<div class="card-trip">
 		  <img src="https://res.cloudinary.com/dwd42pppi/image/upload/v1589945213/authentic_expriences_bgq73f.jpg" >
 		  <div class="card-trip-infos">
@@ -69,6 +73,7 @@
 		    </div>
 		  </div>
 		</div>
+		
 		<div class="card-trip ml-3">
 		  <img src="https://res.cloudinary.com/dwd42pppi/image/upload/v1589945182/new_adventures_j84rk3.jpg" >
 		  <div class="card-trip-infos">
@@ -78,5 +83,7 @@
 		    </div>
 		  </div>
 		</div>
+
 	</div>
+
 </div>
