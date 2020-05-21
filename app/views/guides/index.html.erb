@@ -37,7 +37,11 @@
         </div>
         <div class="button-book-now">
           <!-- the book now button should link to the bookings dashboard -->
-          <%= link_to "Book now", "#", class: "btn btn-salmon text-white" %>
+          <%= simple_form_for [guide, @booking] do |f| %>
+          <!-- add flatpickr to date (enable time) -->
+          <%= f.input :date %>
+          <%= f.submit "Book now", class: "btn btn-salmon text-white" %>
+          <% end %>
         </div>
       </div>
   <% end %>
@@ -74,9 +78,9 @@
 	<div class="row">
   	<div class="dashboard-column col-3">
   	</div>
-  
+
   	<div class="dashboard-main col-9">
   	</div>
-		
+
 	</div>
 </div>
