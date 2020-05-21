@@ -4,8 +4,9 @@ class GuidesController < ApplicationController
   def index
     # @guides = policy_scope(Guide).order(id: :asc)
     if params[:query].present?
-      sql_query = "title ILIKE :query OR location ILIKE :query OR description ILIKE :query"
-      @guides = policy_scope(Guide.where(sql_query, query: "%#{params[:query]}%"))
+      # sql_query = "title ILIKE :query OR location ILIKE :query OR description ILIKE :query"
+      # @guides = policy_scope(Guide.where(sql_query, query: "%#{params[:query]}%"))
+      @guides = policy_scope(Guide).search_by_title_location_description_and_price(params[:query])
     else
       @guides = policy_scope(Guide.all)
     end
