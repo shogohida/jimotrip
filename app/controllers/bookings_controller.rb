@@ -3,25 +3,24 @@ class BookingsController < ApplicationController
     @bookings = policy_scope(Booking)
   end
 
-  # def create
-  #   @guide = Guide.find(params[:guide_id])
-  #   @booking = Booking.new(booking_params)
+  def create
+    @guide = Guide.find(params[:user_id])
+    @booking = Booking.new(booking_params)
+    # raise
+    @booking.guide = @guide
+    authorize @booking
+    if @booking.save
+      redirect_to bookings_path    # (@booking)?
+    # redirect_to booking_path(@booking)
+    else
+      render :index
+    end
+  end
 
-  #   # raise
-  #   @booking.guide = @guide
-  #   authorize @booking
-  #   if @booking.save
-  #     redirect_to bookings_path
-  #     #redirect_to booking_path(@booking)
-  #   # else
-  #   #   render :new
-  #   end
-  # end
+  private
 
-  # private
-
-  # def booking_params
-  #   params.require(:booking).permit(:user_id)
-  #   # pass status and user_id in permit()?
-  # end
+  def booking_params
+   params.require(:booking).permit(:date, :duration, :guide_id)
+    # pass status and user_id in permit()?
+  end
 end
