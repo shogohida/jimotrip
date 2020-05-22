@@ -7,6 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
+
+
 # Constants for guides = jimotrip experiences
 puts "define constants variables..."
 
