@@ -30,7 +30,7 @@ class GuidesController < ApplicationController
     @guide.user = current_user
     authorize @guide
     if @guide.save
-      redirect_to guide_path(@guide)
+      redirect_to bookings_path
     else
       render :new
     end
