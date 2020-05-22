@@ -93,25 +93,30 @@
 
 			  <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
 			  	<div class="d-flex  flex-wrap justify-content-around">
-					<% @bookings.each do |booking| %>
+					<% @guides.each do |guide| %>
 				  <div class="tab-card m-3">
 						<img src="https://res.cloudinary.com/dwd42pppi/image/upload/v1589945213/authentic_expriences_bgq73f.jpg" >
 						  <div class="tab-card-infos">
 						    <div>
-						      <h2 class="salmon-text"><%= booking.guide.title %></h2>
-						      <p class="dark-grey-text"><%= booking.guide.location %></p>
-						      <p class="dark-grey-text"><%= booking.guide.description %></p>
-                  <p class="dark-grey-text">Booked by <%= booking.user.name %></p>
-                  <p class="dark-grey-text"><%= booking.status %></p>
-						      <!-- <p class="dark-grey-text">Don't just observe the culture. Live it.</p> -->
-						      <%= simple_form_for booking do |f| %>
-                    <%= f.input :status, input_html: { value: "Accepted" }, as: :hidden %>
-                    <%= f.submit "Accept" %>
+						      <p class="title-font"><%= guide.title %></p>
+						      <p class="dark-grey-text location-font"><%= guide.location %></p>
+						      <p class="dark-grey-text description-font"><%= guide.description %></p>
+
+                  <% guide.bookings.each do |booking| %>
+                    <p class="dark-grey-text description-font">Booked by <%= booking.user.name %></p>
+                    <p class="dark-grey-text description-font"><strong><%= booking.status %></strong></p>
+  						      <!-- <p class="dark-grey-text">Don't just observe the culture. Live it.</p> -->
+  						      <%= simple_form_for booking do |f| %>
+                      <%= f.input :status, input_html: { value: "Accepted" }, as: :hidden %>
+                      <%= f.submit "Accept" %>
+                    <% end %>
+                    <%= simple_form_for booking do |f| %>
+                      <%= f.input :status, input_html: { value: "Rejected" }, as: :hidden %>
+                      <%= f.submit "Reject" %>
+                    <% end %>
                   <% end %>
-                  <%= simple_form_for booking do |f| %>
-                    <%= f.input :status, input_html: { value: "Rejected" }, as: :hidden %>
-                    <%= f.submit "Reject" %>
-                  <% end %>
+
+
                 </div>
 						  </div>
 						</div>
