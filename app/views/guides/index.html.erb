@@ -16,8 +16,8 @@
 </nav>
 
 <div class="m-3">
-  <h1>Experiences in LOCATION</h1>
-  <p> COUNT experiences for DATE</p>
+  <h1>Experiences in Tokyo</h1>
+  <!-- <p> COUNT experiences for DATE</p> -->
 </div>
 
 <div class="cards-guides-grid">
@@ -25,19 +25,27 @@
   <% @guides.each do |guide| %>
 
       <div class="card-guide">
-        <img src="https://archive.dannychoo.com/uploads/imported-images/2010/02/25412/e17ffadf1ec1b2c3eff4c02d69badcef.jpg"/>
+<!--         <img src="https://archive.dannychoo.com/uploads/imported-images/2010/02/25412/e17ffadf1ec1b2c3eff4c02d69badcef.jpg"/>
+ -->        <% if guide.photo.attached? %>
+              <%= cl_image_tag guide.photo.key, alt: "a photo uploaded by the user" %>
+            <% else %>
+              <!-- <img src="https://res.cloudinary.com/dwd42pppi/image/upload/v1589945213/authentic_expriences_bgq73f.jpg" > -->
+              <%= image_tag "Grass.jpg", alt: "alttext" %>
+            <% end %>
+
         <div class="card-guide-infos">
           <div class>
-            <h2 class="card-guide-title"><%= guide.title %></h2>
-            <p class= "card-guide-location"><%= guide.location %></p>
-            <p class="card-guide-price">¥<%= guide.price %> /day /person</p>
+            <h2 class="card-guide-title title-type"><%= guide.title %></h2>
+            <p class= "card-guide-location location-type mt-2"><%= guide.location %></p>
+            <p class="card-guide-price price-type mt-1">¥<%= guide.price %> /day /person</p>
+            <p class= "card-guide-location description-type mt-3"><%= guide.description %></p>
           </div>
           <div>
            <img src="https://avatars0.githubusercontent.com/u/10365357?v=4" class="card-guide-user avatar-card-guide-bordered" />
             <!-- <i class="fas fa-torii-gate"></i> -->
           </div>
         </div>
-        <div class="button-book-now">
+        <div class="button-book-now m-0">
           <!-- the book now button should link to the bookings dashboard -->
           <%= simple_form_for [guide, @booking] do |f| %>
           <!-- add flatpickr to date (enable time) -->

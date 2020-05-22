@@ -176,3 +176,34 @@
   top: -20px;
   width: 40px;
 }
+
+.title-type {
+  font-size: 22px !important;
+  color: rgb(80, 80, 80);
+  font-weight: bold;
+}
+
+.location-type {
+  font-size: 16px !important;
+  color: rgb(80, 80, 80);
+  font-weight: normal !important;
+}
+
+.description-type {
+  font-size: 14px !important;
+  font-weight: normal !important;
+  color: rgb(80, 80, 80);
+}
+
+.price-type {
+  font-size: 14px !important;
+}
+
+.card-style-new {
+  border-radius: 8px !important;
+  transition: 0.3s !important;
+}
+
+.card-style-new:hover {
+  box-shadow: 0 0 15px rgba(0,0,0,0.6) !important;
+}
