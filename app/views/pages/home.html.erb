@@ -8,8 +8,9 @@
 	  </div>
 		  <div class="flexbox nav-right">
  	      <%= link_to 'Create a Jimotrip', new_guide_path(@user), class: "jimotrip-font-color nav-right header-link hover-color" %>
-		  	<a class="px-3 navbar-brand jimotrip-font-color hover-color" href="#">My Jimotrips</a>
-		  	<a class="navbar-brand jimotrip-font-color lang-text hover-color" href="#"><i class="fas fa-flag-usa"></i></a>
+ 	      <%= link_to "My Jimotrips", bookings_path(@user),  class: "jimotrip-font-color nav-right header-link hover-color px-3" %>
+<!-- 		  	<a class="px-3 navbar-brand jimotrip-font-color hover-color" href="#">My Jimotrips</a>
+ -->		  	<a class="navbar-brand jimotrip-font-color lang-text hover-color" href="#"><i class="fas fa-flag-usa"></i></a>
 		  	<img class="avatar" alt="avatar" src="https://res.cloudinary.com/dwd42pppi/image/upload/v1589894499/uif0jtkw7bylokixyni6y7nhzamm.jpg" />
 		  </div>
 	  </div>
