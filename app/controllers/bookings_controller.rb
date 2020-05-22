@@ -22,13 +22,13 @@ class BookingsController < ApplicationController
 
   def update
     @booking = Booking.find(params[:id])
-    @guide = Guide.find(params[:guide_id])
+    # @guide = Guide.find(params[:guide_id])
     authorize @booking
-    authorize @guide
+    # authorize @guide
     if @booking.update(booking_params)
-      redirect_to guide_guide_bookings_path(@guide)
-    else
-      render :edit
+      redirect_to bookings_path
+    # else
+    #   render :edit
     end
   end
 
