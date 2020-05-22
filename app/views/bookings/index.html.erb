@@ -104,21 +104,33 @@
 
                   <% guide.bookings.each do |booking| %>
                     <p class="dark-grey-text description-font">Booked by <%= booking.user.name %></p>
-                    <p class="dark-grey-text description-font"><strong><%= booking.status %></strong></p>
+
+                    <% if  booking.status == "Pending" %>
+		                  <p class="text-white badge badge-pill badge-warning"><%= booking.status %></p>
+							      <% elsif booking.status == "Accepted" %>
+		                  <p class="text-white badge badge-pill badge-success"><%= booking.status %></p>
+							      <% else %>
+		                  <p class="text-white badge badge-pill badge-danger"><%= booking.status %></p>
+							      <% end %>
+
+                    <!-- <p class="dark-grey-text description-font"><strong><%#= booking.status %></strong></p> -->
   						      <!-- <p class="dark-grey-text">Don't just observe the culture. Live it.</p> -->
-  						      <%= simple_form_for booking do |f| %>
-                      <%= f.input :status, input_html: { value: "Accepted" }, as: :hidden %>
-                      <%= f.submit "Accept" %>
-                    <% end %>
-                    <%= simple_form_for booking do |f| %>
-                      <%= f.input :status, input_html: { value: "Rejected" }, as: :hidden %>
-                      <%= f.submit "Reject" %>
-                    <% end %>
-                  <% end %>
+
 
 
                 </div>
 						  </div>
+  						      <div class="d-flex justify-content-center mb-3">
+  						      <%= simple_form_for booking do |f| %>
+                      <%= f.input :status, input_html: { value: "Accepted" }, as: :hidden %>
+                      <%= f.submit "Accept", class: "mr-0 mx-3 btn btn-outline-success" %>
+                    <% end %>
+                    <%= simple_form_for booking do |f| %>
+                      <%= f.input :status, input_html: { value: "Rejected" }, as: :hidden %>
+                      <%= f.submit "Reject", class: "mx-3 btn btn-outline-danger" %>
+                    <% end %>
+                  <% end %>
+  						      </div>
 						</div>
 						<% end %>
 			  	</div>
