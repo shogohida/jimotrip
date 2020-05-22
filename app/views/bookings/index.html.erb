@@ -95,7 +95,14 @@
 			  	<div class="d-flex  flex-wrap justify-content-around">
 					<% @guides.each do |guide| %>
 				  <div class="tab-card m-3">
-						<img src="https://res.cloudinary.com/dwd42pppi/image/upload/v1589945213/authentic_expriences_bgq73f.jpg" >
+				  					  <div class="tab-card m-3 card-style-new">
+						<% if guide.photo.attached? %>
+							<%= cl_image_tag guide.photo.key, alt: "a photo uploaded by the user" %>
+						<% else %>
+							<!-- <img src="https://res.cloudinary.com/dwd42pppi/image/upload/v1589945213/authentic_expriences_bgq73f.jpg" > -->
+							<%= image_tag "Grass.jpg", alt: "alttext" %>
+						<% end %>
+						<!-- <img src="https://res.cloudinary.com/dwd42pppi/image/upload/v1589945213/authentic_expriences_bgq73f.jpg" > -->
 						  <div class="tab-card-infos">
 						    <div>
 						      <p class="title-font"><%= guide.title %></p>
