@@ -65,11 +65,16 @@
 
 				<!-- 		    <div class="d-flex justify-content-between">
 						    	<div> -->
-							      <h2 class="salmon-text"><%= booking.guide.title %></h2>
-							      <p class="dark-grey-text"><%= booking.guide.location %></p>
-							      <p class="dark-grey-text"><%= booking.guide.description %></p>
-	                  <p class="dark-grey-text"><%= booking.status %></p>
-                    <p>TEST</p>
+							      <p class="title-font"><%= booking.guide.title %></p>
+							      <p class="dark-grey-text location-font">Location: <%= booking.guide.location %></p>
+							      <p class="dark-grey-text description-font"><%= booking.guide.description %></p>
+							      <% if  booking.status == "Pending" %>
+		                  <p class="text-white badge badge-pill badge-warning"><%= booking.status %></p>
+							      <% elsif booking.status == "Accepted" %>
+		                  <p class="text-white badge badge-pill badge-success"><%= booking.status %></p>
+							      <% else %>
+		                  <p class="text-white badge badge-pill badge-danger"><%= booking.status %></p>
+							      <% end %>
 <!-- 									</div>
 									<div class="nav-right"> -->
 <!-- 	                  <img class="avatar" alt="avatar" src="https://res.cloudinary.com/dwd42pppi/image/upload/v1589894499/uif0jtkw7bylokixyni6y7nhzamm.jpg" />
