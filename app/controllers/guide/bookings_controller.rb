@@ -8,18 +8,7 @@ class Guide::BookingsController < ApplicationController
   # rejected
   end
 
-  def update
-    @guide = Guide.find(params[:guide_id])
-    @booking.guide = @guide
-    @booking.user = current_user
-    authorize @guide
-    authorize @booking
-    if @guide.update(booking_params)
-      redirect_to bookings_path
-    else
-      render :edit
-    end
-  end
+
 
   private
 

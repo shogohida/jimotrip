@@ -6,14 +6,15 @@
 	  </div>
 		  <div class="flexbox nav-right">
  	      <%= link_to 'Create a Jimotrip', new_guide_path(@user), class: "jimotrip-font-color nav-right header-link hover-color" %>
-		  	<a class="px-3 navbar-brand jimotrip-font-color hover-color" href="#">My Jimotrips</a>
-		  	<a class="navbar-brand jimotrip-font-color lang-text hover-color" href="#"><i class="fas fa-flag-usa"></i></a>
+ 	      <%= link_to "My Jimotrips", bookings_path(@user),  class: "jimotrip-font-color nav-right header-link hover-color px-3" %>
+<!-- 		  	<a class="px-3 navbar-brand jimotrip-font-color hover-color" href="#">My Jimotrips</a>
+ -->		  	<a class="navbar-brand jimotrip-font-color lang-text hover-color" href="#"><i class="fas fa-flag-usa"></i></a>
 		  	<img class="avatar" alt="avatar" src="https://res.cloudinary.com/dwd42pppi/image/upload/v1589894499/uif0jtkw7bylokixyni6y7nhzamm.jpg" />
 		  </div>
 	  </div>
 	</div>
 </nav>
-
+ <%# raise %>
 <div class="container mt-3">
 	<div class="d-flex">
 
@@ -36,21 +37,36 @@
 			    <a class="nav-link nav-link-dark" id="pills-profile-tab" data-toggle="pill" href="/guide/bookings" role="tab" aria-controls="pills-profile" aria-selected="false">Jimotrips I've Created</a>
 			  </li>
 			</ul>
-
+<%# raise %>
 			<div class="tab-content" id="pills-tabContent">
 			  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
 			  	<div class="d-flex flex-wrap justify-content-around">
 					<%# raise %>
 					<% @bookings.each do |booking| %>
-				  <div class="tab-card m-0">
-						<img src="https://res.cloudinary.com/dwd42pppi/image/upload/v1589945213/authentic_expriences_bgq73f.jpg" >
+				  <div class="tab-card m-3">
+						<% if booking.guide.photo.attached? %>
+							<%= cl_image_tag booking.guide.photo.key, alt: "a photo uploaded by the user" %>
+						<% else %>
+							<!-- <img src="https://res.cloudinary.com/dwd42pppi/image/upload/v1589945213/authentic_expriences_bgq73f.jpg" > -->
+							<%= image_tag "Grass.jpg", alt: "alttext" %>
+						<% end %>
+
 						  <div class="tab-card-infos">
 						    <div>
-						      <h2 class="salmon-text"><%= booking.guide.title %></h2>
-						      <p class="dark-grey-text"><%= booking.guide.location %></p>
-						      <p class="dark-grey-text"><%= booking.guide.description %></p>
-                  <p class="dark-grey-text"><%= booking.status %></p>
-						      <p class="dark-grey-text">Don't just observe the culture. Live it.</p>
+
+				<!-- 		    <div class="d-flex justify-content-between">
+						    	<div> -->
+							      <h2 class="salmon-text"><%= booking.guide.title %></h2>
+							      <p class="dark-grey-text"><%= booking.guide.location %></p>
+							      <p class="dark-grey-text"><%= booking.guide.description %></p>
+	                  <p class="dark-grey-text"><%= booking.status %></p>
+<!-- 									</div>
+									<div class="nav-right"> -->
+<!-- 	                  <img class="avatar" alt="avatar" src="https://res.cloudinary.com/dwd42pppi/image/upload/v1589894499/uif0jtkw7bylokixyni6y7nhzamm.jpg" />
+	                  <p class="dark-grey-text"><%#= User.find(booking.id).name %></p> -->
+	<!-- 					    	</div>
+						    </div> -->
+
 						    </div>
 						  </div>
 						</div>
