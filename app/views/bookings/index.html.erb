@@ -52,7 +52,7 @@
 			  	<div class="d-flex flex-wrap justify-content-around">
 					<%# raise %>
 					<% @bookings.each do |booking| %>
-				  <div class="tab-card m-3">
+				  <div class="tab-card m-3 card-style-new">
 						<% if booking.guide.photo.attached? %>
 							<%= cl_image_tag booking.guide.photo.key, alt: "a photo uploaded by the user" %>
 						<% else %>
