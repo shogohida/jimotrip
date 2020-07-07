@@ -5,16 +5,6 @@ Rails.application.routes.draw do
   get 'bookings/index'
   devise_for :users
   root to: 'pages#home'
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-
-  # POINTS TO CHECKOUT
-  # Can we write line 16 or should we write line 14?
-  # Can we write 'as: :search'
-  # how do we write this 'guide/bookings#index? Guide::BookingsController
-
-
-  # REFACTORED ROUTES - WARNING: I don't know how to code the User Story 7
-  # root to: 'pages#home'
 
   resources :guides, only: [:index, :show, :new, :create ] do
     resources :bookings, only: :create
@@ -24,9 +14,6 @@ Rails.application.routes.draw do
     resources :bookings, only: :index, as: :guide_bookings
   end
 
-  # resources :users, only: [:] do
-  #   resources :bookings, only: :create
-  # end
 
   resources :bookings, only: [:index, :update]
 
@@ -64,5 +51,3 @@ Rails.application.routes.draw do
   # post 'guides', to: 'guides#create'
 
 end
-
-

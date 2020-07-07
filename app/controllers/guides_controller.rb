@@ -1,12 +1,10 @@
 class GuidesController < ApplicationController
-  # skip_before_action :authenticate_user!, only: [:index, :show]
+  skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
     @booking = Booking.new
     # @guides = policy_scope(Guide).order(id: :asc)
     if params[:query].present?
-      # sql_query = "title ILIKE :query OR location ILIKE :query OR description ILIKE :query"
-      # @guides = policy_scope(Guide.where(sql_query, query: "%#{params[:query]}%"))
       @guides = policy_scope(Guide).search_by_title_location_description_and_price(params[:query])
     else
       @guides = policy_scope(Guide.all)
@@ -19,13 +17,11 @@ class GuidesController < ApplicationController
   end
 
   def new
-    # @user = User.find(params[:user_id])
     @guide = Guide.new
     authorize @guide
   end
 
   def create
-    # @user = User.find(params[:user_id])
     @guide = Guide.new(guide_params)
     @guide.user = current_user
     authorize @guide
