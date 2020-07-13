@@ -6,6 +6,7 @@
 JimoTrip is an app which connects foreign tourists and local guides in Japan. Guides create events and tourists decide which events they join.Guides can set price for their events and earn additional money apart from their main jobs.
 
 # Technologies used
+-Ubuntu 18.04  
 -Ruby 2.6.6  
 -Rails 6.0.0  
 -JavaScript  
