@@ -39,6 +39,12 @@ gem 'dotenv-rails', groups: [:development, :test]
 gem 'cloudinary', '~> 1.12.0'
 gem 'faker'
 
+gem 'omniauth'
+gem 'omniauth-github'
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
+gem 'omniauth-linkedin-oauth2'
+
 group :development, :test do
   gem 'rspec-rails', '~> 4.0.0'
 end
