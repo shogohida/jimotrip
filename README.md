@@ -17,7 +17,8 @@ JimoTrip is an app which connects foreign tourists and local guides in Japan. Gu
 -PostgreSQL  
 -Git/GitHub  
 -Heroku  
--Rubocop
+-Rubocop  
+-Omniauth log in function with Twitter, GitHub, Facebook and LinkedIn
 
 # Future features
 1 Add money transfer system so that guides can receive fee
