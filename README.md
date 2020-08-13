@@ -21,4 +21,5 @@ JimoTrip is an app which connects foreign tourists and local guides in Japan. Gu
 -Omniauth log in function with Twitter, GitHub, Facebook and LinkedIn
 
 # Future features
-1 Add money transfer system so that guides can receive fee
+1 Add money transfer system so that guides can receive fee  
+2 Incorporate Ansible, AWS, Docker and Circle CI
