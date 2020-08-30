@@ -192,8 +192,6 @@
 
 
 
-
-
 # puts 'Creating the users as tourists..'
 # # CREATE users as tourists
 # 10.times do
@@ -204,27 +202,6 @@
 #   )
 # end
 # puts "Finished creating #{User.count} users as tourists!"
-
-
-# CODE from mister cocktail challenge
-
-# puts 'Creating the cocktails with attached image and 2 associated doses...'
-# 3.times do
-#   cocktail = Cocktail.create!(
-#     name: Faker::Name.first_name
-#   )
-#   file = URI.open('https://giantbomb1.cbsistatic.com/uploads/original/9/99864/2419866-nes_console_set.png')
-#   cocktail.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
-#   2.times do |count|
-#     Dose.create!(
-#       description: "#{rand(0..5)} cl",
-#       cocktail: cocktail,
-#       ingredient: Ingredient.all[count]
-#     )
-#   end
-# end
-
-# CODE from https://kitt.lewagon.com/camps/394/lectures/05-Rails%2F05-Rails-MC-with-images
 
 # require "open-uri"
 
@@ -240,22 +217,4 @@
 #   puts "Created #{guide.title}"
 # end
 
-# puts "Finished!"
-
-
-# CODE FROM LECTURE - to help build realistic seeds
-# CODE FROM LECTURE - https://kitt.lewagon.com/camps/394/lectures/05-Rails%2F03-Rails-restaurant-reviews#source
-
-# # db/seeds.rb
-# puts "Cleaning database..."
-# Restaurant.destroy_all
-
-# puts "Creating restaurants..."
-# dishoom = { name: "Dishoom", address: "7 Boundary St, London E2 7JE", stars: 5 }
-# pizza_east =  { name: "Pizza East", address: "56A Shoreditch High St, London E1 6PQ", stars: 4 }
-
-# [ dishoom, pizza_east ].each do |attributes|
-#   restaurant = Restaurant.create!(attributes)
-#   puts "Created #{restaurant.name}"
-# end
 # puts "Finished!"
