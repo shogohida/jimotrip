@@ -21,10 +21,4 @@ class GuidePolicy < ApplicationPolicy
   def destroy
 
   end
-
-  # private
-
-  # def user_is_guide?
-
-  # end
 end
