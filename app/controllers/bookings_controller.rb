@@ -7,14 +7,12 @@ class BookingsController < ApplicationController
   def create
     @guide = Guide.find(params[:guide_id])
     @booking = Booking.new(booking_params)
-    # raise
     @booking.guide = @guide
     @booking.user = current_user
     authorize @guide
     authorize @booking
-    # raise
     if @booking.save
-      redirect_to bookings_path    # (@booking)?
+      redirect_to bookings_path    
     # redirect_to booking_path(@booking)
     # else
     #   render :index
@@ -37,6 +35,5 @@ class BookingsController < ApplicationController
 
   def booking_params
    params.require(:booking).permit(:status, :date, :duration, :guide_id)
-    # pass status and user_id in permit()?
   end
 end
