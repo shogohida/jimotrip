@@ -65,9 +65,9 @@
 
 				<!-- 		    <div class="d-flex justify-content-between">
 						    	<div> -->
-							      <p class="title-font"><%= booking.guide.title %></p>
-							      <p class="dark-grey-text location-font">Location: <%= booking.guide.location %></p>
-							      <p class="dark-grey-text description-font"><%= booking.guide.description %></p>
+							      <p class="title-font"><%= booking.guide_title %></p>
+							      <p class="dark-grey-text location-font">Location: <%= booking.guide_location %></p>
+							      <p class="dark-grey-text description-font"><%= booking.guide_description %></p>
 							      <% if  booking.status == "Pending" %>
 		                  <p class="text-white badge badge-pill badge-warning"><%= booking.status %></p>
 							      <% elsif booking.status == "Accepted" %>
@@ -110,7 +110,7 @@
 						      <p class="dark-grey-text description-font"><%= guide.description %></p>
 
                   <% guide.bookings.each do |booking| %>
-                    <p class="dark-grey-text description-font">Booked by <%= booking.user.name %></p>
+                    <p class="dark-grey-text description-font">Booked by <%= booking.user_name %></p>
 
                     <% if  booking.status == "Pending" %>
 		                  <p class="text-white badge badge-pill badge-warning"><%= booking.status %></p>
