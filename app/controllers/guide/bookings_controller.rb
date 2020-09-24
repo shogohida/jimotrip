@@ -3,17 +3,17 @@ class Guide::BookingsController < ApplicationController
     @bookings = policy_scope(Booking)
   end
 
-  def edit
-  # pending to accepted
-  # rejected
-  end
+  # def edit
+  # # pending to accepted
+  # # rejected
+  # end
 
 
 
-  private
+  # private
 
-  def booking_params
-   params.require(:booking).permit(:status, :date, :duration, :guide_id)
-    # pass status and user_id in permit()?
-  end
+  # def booking_params
+  #  params.require(:booking).permit(:status, :date, :duration, :guide_id)
+  #   # pass status and user_id in permit()?
+  # end
 end
