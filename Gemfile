@@ -44,6 +44,7 @@ gem 'omniauth-twitter'
 gem 'omniauth-facebook'
 gem 'omniauth-linkedin-oauth2'
 gem 'rails_best_practices'
+gem 'rubycritic'
 
 group :development, :test do
   gem 'rspec-rails', '~> 4.0.0'
