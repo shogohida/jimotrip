@@ -12,7 +12,7 @@ class BookingsController < ApplicationController
     authorize @guide
     authorize @booking
     if @booking.save
-      redirect_to bookings_path    
+      redirect_to bookings_path
     # redirect_to booking_path(@booking)
     # else
     #   render :index
