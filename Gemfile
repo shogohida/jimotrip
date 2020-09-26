@@ -37,6 +37,7 @@ gem 'pundit'
 gem 'pg_search', '~> 2.3.0'
 gem 'cloudinary', '~> 1.12.0'
 gem 'faker'
+gem 'bullet', group: 'development'
 
 gem 'omniauth'
 gem 'omniauth-github'
